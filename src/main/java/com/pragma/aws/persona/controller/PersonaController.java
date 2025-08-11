@@ -38,7 +38,7 @@ public class PersonaController {
             }
     )
     @GetMapping
-    public ResponseEntity<FindPersonaResponse> findPersonaByEmail(@RequestParam(name = "email", required = true) String email) {
+    public ResponseEntity<FindPersonaResponse> findPersonaByEmail(@RequestParam(name = "email") String email) {
         return new ResponseEntity<>(personaService.findPersonaByEmail(email), HttpStatus.OK);
     }
 
