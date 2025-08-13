@@ -18,3 +18,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  forward-headers-strategy: framework
+  tomcat:
+    use-relative-redirects: true
+
+springdoc:
+  swagger-ui:
+    use-root-path: true                 # sirve /swagger-ui/** correctamente detrás de proxy
+    config-url: /v3/api-docs/swagger-config
+    url: /v3/api-docs
